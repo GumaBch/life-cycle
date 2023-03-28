@@ -7,7 +7,11 @@
 
       <div *ngIf="listaDeCompra.length !==0; else naoTemItem">
         <div *ngFor="let item of listaDeCompra">
-          <app-item [item]="item" (emitindoItemParaEditar)="editarItem($event)"></app-item>
+          <app-item
+            [item]="item"
+            (emitindoItemParaEditar)="editarItem($event)"
+            (emitindoItemParaComprado)="marcarItemDaLista($event)"
+          ></app-item>
         </div>
       </div>
 

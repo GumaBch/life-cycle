@@ -4,9 +4,9 @@
   name="comprado"
   id="comprado"
   [checked]="item.comprado"
-  (change)="marcarComprado()"
+  (change)="marcarItem()"
 >
-<p class="description" [ngClass]="{ 'line-through': item.comprado }">{{ item.nome }}</p>
+<p class="description" [class.line-through]="item.comprado">{{ item.nome }}</p>
 <div class="d-contents">
   <fa-icon
     class="delete-icon"

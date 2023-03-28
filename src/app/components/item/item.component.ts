@@ -11,7 +11,6 @@ export class ItemComponent implements OnInit, OnChanges {
 
   @Input() item!: Item;
   @Output() emitindoItemParaEditar = new EventEmitter();
-  @Output() emitindoItemParaComprado = new EventEmitter();
 
   faPen = faPen;
   faTrash = faTrash
@@ -26,7 +25,7 @@ export class ItemComponent implements OnInit, OnChanges {
     this.emitindoItemParaEditar.emit(this.item);
   }
 
-  marcarComprado() {
-    this.emitindoItemParaComprado.emit(this.item);
+  marcarItem() {
+    this.item.comprado = !this.item.comprado;
   }
 }

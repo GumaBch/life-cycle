@@ -7,7 +7,17 @@
 >
 <p class="description">{{ item.nome }}</p>
 <div class="d-contents">
-  <fa-icon class="delete-icon" *ngIf="!item.comprado" [icon]="faTrash" ></fa-icon>
-  <fa-icon class="edit-icon" *ngIf="!item.comprado" [icon]="faPen" ></fa-icon>
+  <fa-icon
+    class="delete-icon"
+    *ngIf="!item.comprado"
+    [icon]="faTrash"
+    (click)="editarItem()"
+  ></fa-icon>
+  <fa-icon
+    class="edit-icon"
+    *ngIf="!item.comprado"
+    [icon]="faPen"
+    (click)="editarItem()"
+  ></fa-icon>
 </div>
 <small class="date">{{ item.data }}</small>

@@ -21,8 +21,8 @@ export class ItemComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void { }
 
-editarItem() {
-  this.emitindoItemParaEditar.emit(this.item);
-}
+  editarItem() {
+    this.emitindoItemParaEditar.emit(this.item);
+  }
 
 }
